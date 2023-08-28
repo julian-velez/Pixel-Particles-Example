@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000;
+    overflow: hidden;
+}
+
+.pixel-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: #111;
+}
+
+.pixel {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: #ff3399;
+    border-radius: 50%;
+    animation: pixelAnimation 2s infinite;
+}
+
+@keyframes pixelAnimation {
+    0%, 100% {
+        transform: translate(0, 0);
+        background-color: #ff3399;
+    }
+    50% {
+        transform: translate(10px, 10px);
+        background-color: #66ccff;
+    }
+}
